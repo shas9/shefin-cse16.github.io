@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# website: http://ogp.me/ns/website#">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="description" content="Repeating Units">
+    <meta property="og:title" content="Repeating Units">
+    
+    <meta property="og:type" content="article">
+    <meta property="article:published_time" content="2020-02-18">
+    
+    <meta property="og:description" content="Repeating Units">
+    <meta property="og:url" content="https://shefin-cse16.github.io/post/repunit/">
+    <meta property="og:site_name" content="Shefin&#39;s Blog">
+    
+    <meta property="og:tags" content="Repunit">
+    
+    <meta property="og:tags" content="Repeating Units">
+    
+    <meta property="og:tags" content="blog">
+    
+    <meta property="og:tags" content="Competitive Programming">
+    
+    <meta property="og:tags" content="Number Theory">
+    
+    <meta name="generator" content="Hugo 0.64.1" />
+    <title>Repeating Units &middot; Shefin&#39;s Blog</title>
+    
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.7/styles/default.min.css">
+    
+    <link rel="stylesheet" href="https://shefin-cse16.github.io/css/style.css">
+    
+    <link href="https://shefin-cse16.github.io/index.xml" rel="alternate" type="application/rss+xml" title="Shefin&#39;s Blog" />
+    
+    
+    <link rel="icon" href="https://shefin-cse16.github.io/favicon.ico" />
+    
+
+    
+    
+    <script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+  });
+  MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+
+  MathJax.Hub.Config({
+  
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+  });
+</script>
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top visible-xs">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			
+				<a class="navbar-brand" href="https://shefin-cse16.github.io/">RISAL SHAHRIAR SHEFIN</a>
+			
+		</div>
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav">
+				
+				
+					<li><a href="https://shefin-cse16.github.io/about/">About</a></li>
+				
+					<li><a href="https://shefin-cse16.github.io/post/">Blog</a></li>
+				
+			</ul>
+		</div>
+	</div>
+</nav>
+<div class="container-fluid">
+	<div class="row">
+		<div id="menu" class="hidden-xs col-sm-4 col-md-3">
+	<div id="menu-content" class="vertical-align">
+		
+			<h1 class="text-center"><a href="https://shefin-cse16.github.io/">RISAL SHAHRIAR SHEFIN</a></h1>
+		
+		
+		
+			<small class="text-center center-block">PROGRAMMING BLOG</small>
+		
+		
+		
+			<img id="profile-pic" src="https://shefin-cse16.github.io//img/profile.png" alt="My Picture" class="img-circle center-block">
+		
+		<div id="social" class="text-center">
+			
+				<a href="https://www.facebook.com/shahriar.shefin"><i class="fa fa-facebook fa-2x"></i></a>
+			
+				<a href="https://github.com/shefin-cse16"><i class="fa fa-github fa-2x"></i></a>
+			
+				<a href="https://www.linkedin.com/in/risal-shahriar-shefin/"><i class="fa fa-linkedin fa-2x"></i></a>
+			
+
+			<a href="mailto:shefin.cse16@gmail.com"><i class="fa fa-envelope-o fa-2x"></i></a>
+		</div>
+		<div id="links" class="text-center">
+			
+			
+				<a href="https://shefin-cse16.github.io/about/">About</a>
+			
+				<a href="https://shefin-cse16.github.io/post/">Blog</a>
+			
+		</div>
+	</div>
+</div>
+
+		<div id="content" class="col-xs-12 col-sm-8 col-md-9">
+			<div class="row">
+				<div id="post" class="col-sm-offset-1 col-sm-10 col-md-10 col-lg-8">
+
+<main>
+	<header>
+		<h1>Repeating Units</h1>
+	</header>
+
+	<article>
+		<h2 id="heading"></h2>
+<p>REPUNIT কী ?</p>
+<p>REPUNIT হচ্ছে এমন একটা সংখ্যা, যে সংখ্যার সবগুলো ডিজিট 1 ।</p>
+<p>যেমনঃ 5 লেংথের REPUNIT হচ্ছে 11111 । REPUNIT শুধুমাত্র Base 10 নাম্বার সিস্টেমে বানানো যাবে, এমন ভাবাটা ভুল । Base 1 ছাড়া আর যেকোনো নাম্বার সিস্টেমেই নির্দিষ্ট লেংথের REPUNIT নাম্বার বানানো যায় ।</p>
+<p>REPUNIT নিয়ে বিভিন্ন ধরণের প্রবলেম তৈরি করা যায় । একটা প্রবলেম ধরা যাক এমনঃ Base b আর ওই Base b এর একটা নাম্বার n দেওয়া আছে । বলতে হবে Base b এর কোনো REPUNIT কে n দিয়ে নিঃশেষে ভাগ করা যাবে কিনা ।</p>
+<p>Example:</p>
+<p>10 7</p>
+<p>এখানে আমাদের Base 10 । 7 দিয়ে 111111 কে নিঃশেষে ভাগ করা যায় ।</p>
+<p>10 36</p>
+<p>এবারও আমাদের Base 10 । 36 দিয়ে Base 10 এর কোনো REPUNIT কেই নিঃশেষে ভাগ করা যায় না আসলে ।</p>
+<p>2 101</p>
+<p>এখন আমাদের Base 2 । 101 দিয়ে 1111 নিঃশেষে বিভাজ্য । এখানে 101 , 1111 এরা কিন্তু বাইনারিতে ।</p>
+<p>প্রশ্ন হচ্ছে এই বিভাজ্যতা কীভাবে পরীক্ষা করা যায় ?</p>
+<p>প্রথমে Base 10 এ চিন্তা করি । k লেংথ এর REPUNIT কে চাইলে কিন্তু এভাবে লিখা যায়ঃ</p>
+<p>$10^0 + 10^1 + 10^2 +&hellip;&hellip;&hellip;.+ 10^{k - 1}$</p>
+<p>ভালমত লক্ষ্য করলে দেখা যাবে এটা আসলে একটা গুণোত্তর ধারা । প্রথম পদ, $a = 10^0 = 1$ । অনুপাত, r = দ্বিতীয় পদ / প্রথম পদ = $\frac{10^1}{10^0} = 10$ । আর k লেংথের REPUNIT এর জন্য এই ধারায় পদ আছে kটি । তাহলে গুণোত্তর ধারার যোগফলের সুত্র, S = $\frac{a\times{(r^n - 1)}}{r - 1}$ থেকে পাওয়া যায়ঃ</p>
+<p>Base 10 এর জন্য,</p>
+<p>k লেংথের REPUNIT = $\frac{1\times{(10^k - 1)}}{(10 - 1)} = \frac{10^k - 1}{10 - 1}$</p>
+<p>অর্থাৎ যেকোনো Base b (b &gt; 1) এর জন্য,</p>
+<p>k লেংথের REPUNIT = $\frac{b^k - 1}{b - 1}$</p>
+<p>এখানে একটা কনফিউশন হতে পারে যে, Base গুলোর ক্যালকুলেশন ওই Base এই করতে হবে কিনা । না, আমরা সব Base এর ক্যালকুলেশন Base 10 এই করব । যেমনঃ উপরের Base 2 এর যে example, সেখানের 101 আর 1111 কে Base 10 এ কনভার্ট করলে পাওয়া যায় 5 এবং 15 ।</p>
+<p>সূত্রটা ব্যবহার করে একটা উদাহরণ দিলে আরো পরিষ্কার হবেঃ</p>
+<p>Base 2 এর 4 লেংথের REPUNIT = $\frac{2^4 - 1}{2 - 1}$ = 15 ।</p>
+<p>বাইনারি 1111 এর ডেসিমাল ভ্যালু এটাই। :D</p>
+<p>এখন Base b এ, যেকোনো নাম্বার n দিয়ে যদি k লেংথের কোনো REPUNIT কে নিঃশেষে ভাগ করা যায়, তাহলে অবশ্যই</p>
+<p>$n \times{d} = \frac{b^k - 1}{b - 1}$ , যেখানে d &gt; 0</p>
+<p>$=&gt; d = \frac{b^k - 1}{n\times{(b - 1)}}$</p>
+<p>এখানে $d$ অবশ্যই পূর্ণ সংখ্যা ।</p>
+<p>তাহলে, $\frac{b^k - 1}{n\times{(b - 1)}}$ ও অবশ্যই একটি পূর্ণ সংখ্যা ।</p>
+<p>সুতরাং, ${b^k - 1}$ অবশ্যই $(n\times{(b - 1)})$ দিয়ে নিঃশেষে বিভাজ্য ।</p>
+<p>আমরা তাহলে লিখতে পারি,</p>
+<p>$(b^k - 1) = 0 (mod (n\times{(b - 1)}) )$</p>
+<p>=&gt; $b^k = 1 (mod (n\times{(b - 1)}) )$ &hellip;&hellip;&hellip;(1)</p>
+<p>আবার Euler&rsquo;s Theorem থেকে আমরা পাই,</p>
+<p>$A^{phi(i)} = 1$ (mod i) &hellip;&hellip;..(2) [যেখানে A এবং i সহমৌলিক]</p>
+<p>সমীকরণ (1) কে (2) এর সাথে তুলনা করে পাই,</p>
+<p>$b$ এবং $n\times{(b - 1)}$ সহমৌলিক । k এর এক বা একাধিক মানের একটি হচ্ছে $phi( n\times{(b - 1)} )$ । ( A, i সহমৌলিক না হলে যে $A^k = 1$(mod i) হওয়া সম্ভব নয়, সেটাও প্রমাণ করা যায় )</p>
+<p>অতএব, Base $b$ হলে $n\times{(b - 1)}$ যদি b এর সহমৌলিক হয়, তাহলেই শুধুমাত্র n দিয়ে Base b এর এক বা একাধিক REPUNIT কে নিঃশেষে ভাগ করা সম্ভব ।</p>
+<p>কিছু প্রবলেমঃ</p>
+<p><a href="https://toph.co/p/repeating-units">https://toph.co/p/repeating-units</a></p>
+<p><a href="https://www.hackerrank.com/contests/projecteuler/challenges/euler129">https://www.hackerrank.com/contests/projecteuler/challenges/euler129</a></p>
+
+	</article>
+</main>
+
+<div id="bottom-nav" class="text-center center-block">
+	<a href=" https://shefin-cse16.github.io/" class="btn btn-default"><i class="fa fa-home"></i> Home</a>
+</div>
+
+
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+  </div>
+  
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'code-here', 'auto');
+    ga('send', 'pageview');
+    window.baseURL = "https:\/\/shefin-cse16.github.io\/";
+  </script>
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script>
+  
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.7/highlight.min.js"></script>
+  
+  <script src="https://shefin-cse16.github.io//js/App.js"></script>
+  
+</body>
+</html>

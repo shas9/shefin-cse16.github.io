@@ -2,8 +2,8 @@ baseurl = "https://shefin-cse16.github.io/"
 theme = "hugo-geo2"
 relativeURLs = false
 languageCode = "en-us"
-title = "My New Hugo Site"
-disqusShortname = "shortcode-here"
+title = "Shefin's Blog"
+disqusShortname = ""
 paginate = 5
 
 [taxonomies]
@@ -17,36 +17,32 @@ paginate = 5
 	
 	analytics = "code-here"
 
-	email = "alexurquhart@gmail.com"
+	email = "shefin.cse16@gmail.com"
+
+	# Header Title for the main page
+	header = "Some Random Writings"
 
 	profilepic = "img/profile.png"
 	
-	title = "MY NAME"
-	subtitle = "MY HUGO BLOG"
+	title = "RISAL SHAHRIAR SHEFIN"
+	subtitle = "PROGRAMMING BLOG"
 
 	# Social buttons for sidebar
 	# Each of these are optional
 	[[params.socialbuttons]]
-	faicon = "github"
-	url = "https://github.com/alexurquhart"
+	faicon = "facebook"
+	url = "https://www.facebook.com/shahriar.shefin"
 	[[params.socialbuttons]]
-	faicon = "twitter"
-	url = "https://twitter.com/alexanderurq"
+	faicon = "github"
+	url = "https://github.com/shefin-cse16"
 	[[params.socialbuttons]]
 	faicon = "linkedin"
-	url = "https://linkedin.com"
-	[[params.socialbuttons]]
-	faicon = "google-plus"
-	url = "https://plus.google.com/+YourID"
+	url = "https://www.linkedin.com/in/risal-shahriar-shefin/"
 
 	[[params.navlinks]]
 	name = "About"
-	url = "about"
+	url = "about/"
 	
 	[[params.navlinks]]
 	name = "Blog"
-	url = ""
-	
-	[[params.navlinks]]
-	name = "Tutorials"
-	url = "tutorial/"
+	url = "post/"
