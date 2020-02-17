@@ -41,7 +41,7 @@ paginate = 5
 
 	[[params.navlinks]]
 	name = "About"
-	url = "about"
+	url = "about/"
 	
 	[[params.navlinks]]
 	name = "Blog"
