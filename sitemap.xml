@@ -3,26 +3,26 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://shefin-cse16.github.io/</loc>
+    <loc>https://shefin-cse16.github.io:80/</loc>
     <lastmod>2020-02-17T20:47:33+06:00</lastmod>
   </url>
   
   <url>
-    <loc>https://shefin-cse16.github.io/post/</loc>
+    <loc>https://shefin-cse16.github.io:80/post/</loc>
     <lastmod>2020-02-17T20:47:33+06:00</lastmod>
   </url>
   
   <url>
-    <loc>https://shefin-cse16.github.io/post/hello/</loc>
+    <loc>https://shefin-cse16.github.io:80/post/hello/</loc>
     <lastmod>2020-02-17T20:47:33+06:00</lastmod>
   </url>
   
   <url>
-    <loc>https://shefin-cse16.github.io/tags/</loc>
+    <loc>https://shefin-cse16.github.io:80/tags/</loc>
   </url>
   
   <url>
-    <loc>https://shefin-cse16.github.io/tutorials/</loc>
+    <loc>https://shefin-cse16.github.io:80/tutorials/</loc>
   </url>
   
 </urlset>
