@@ -1,4 +1,4 @@
-baseurl = "https://shefin-cse16.github.io:80"
+baseurl = "https://shefin-cse16.github.io/"
 theme = "hugo-geo2"
 relativeURLs = false
 languageCode = "en-us"
