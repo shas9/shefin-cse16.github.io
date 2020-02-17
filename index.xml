@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>My New Hugo Site</title>
-    <link>https://shefin-cse16.github.io:80/</link>
+    <link>https://shefin-cse16.github.io/</link>
     <description>Recent content on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 17 Feb 2020 20:47:33 +0600</lastBuildDate>
     
-	<atom:link href="https://shefin-cse16.github.io:80/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://shefin-cse16.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Welcome</title>
-      <link>https://shefin-cse16.github.io:80/post/hello/</link>
+      <link>https://shefin-cse16.github.io/post/hello/</link>
       <pubDate>Mon, 17 Feb 2020 20:47:33 +0600</pubDate>
       
-      <guid>https://shefin-cse16.github.io:80/post/hello/</guid>
+      <guid>https://shefin-cse16.github.io/post/hello/</guid>
       <description>Hello there, this is the first post Test Attempt</description>
     </item>
     
