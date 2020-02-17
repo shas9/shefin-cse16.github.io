@@ -1,5 +1,5 @@
-baseurl = "http://example.com/"
-theme = "hugo-geo"
+baseurl = "https://shefin-cse16.github.io/"
+theme = "hugo-geo2"
 relativeURLs = false
 languageCode = "en-us"
 title = "My New Hugo Site"
