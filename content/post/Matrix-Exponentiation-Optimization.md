@@ -107,7 +107,7 @@ Some practice problems:
 
 1. [Tribonacci](https://algo.codemarshal.org/contests/gub-iupc-18/problems/E) , (Problem in short: Given Tribonacci relation: $f(n) = f(n-1)+f(n-2)+f(n-3)$. Base cases: $f(0)=0, f(1)=1, f(2)=2$. In each query, you'll be given two integers $n, k$. Print the last $k$ digits of $n^{th}$ Tribonacci number. $0\leq n\leq 10^{18}, 1\leq Query\leq 5\times10^5, 1\leq k\leq 6$.)
 
-2. [Rik, the Space Traveller](https://toph.co/p/rik-the-space-traveller)
+2. [Rik, the Space Traveler](https://toph.co/p/rik-the-space-traveller)
 
 My template: [Matrix Exponentiation Optimized](https://github.com/Shefin-CSE16/Competitive-Programming/blob/master/Templates/Matrix%20Expo%20Optimized)
 
