@@ -56,7 +56,7 @@ $$\left[\begin{matrix}
 \begin{align}F = M^x \times B \end{align}
 
 $M^x$ সরাসরি লুপ চালিয়ে গুণ করে বের করলে অবশ্যই টাইম কমপ্লেক্সিটিতে হবে না । আমাদের আরো ভালো উপায় বের করতে হবে ।  লক্ষ্য করি, আমরা $a^p$ ($a, p$ পূর্ণসংখ্যা) কে চাইলে এভাবে লিখতে পারিঃ  
-$$ a^p = a^{p_1} \times a^{p_2} \times ...... \times a^{p_n} $$, যেখানে $p_1, p_2, ..., p_n$, এরা 2 এর কোনো পাওয়ার ।
+$$ a^p = a^{p_1} \times a^{p_2} \times ...... \times a^{p_n} $$, যেখানে $p_1, p_2, ..., p_n$, এরা $2$ এর কোনো পাওয়ার ।
 
 যেমনঃ $a^{11} = a^8\times a^2\times a^1$ ।
 
@@ -105,7 +105,7 @@ $$\Rightarrow \left[\begin{matrix}
 
 Some practice problems:
 
-1. [Tribonacci](https://algo.codemarshal.org/contests/gub-iupc-18/problems/E) , (Problem in short: Given Tribonacci relation: $f(n) = f(n-1)+f(n-2)+f(n-3)$. Base cases: $f(0)=1, f(1)=1, f(2)=2$. In each query, you'll be given two integers $n, k$. Print the last $k$ digits of $n^{th}$ Tribonacci number. $0\leq n\leq 10^{18}, 1\leq Query\leq 5\times10^5, 1\leq k\leq 6$.)
+1. [Tribonacci](https://algo.codemarshal.org/contests/gub-iupc-18/problems/E) , (Problem in short: Given Tribonacci relation: $f(n) = f(n-1)+f(n-2)+f(n-3)$. Base cases: $f(0)=0, f(1)=1, f(2)=2$. In each query, you'll be given two integers $n, k$. Print the last $k$ digits of $n^{th}$ Tribonacci number. $0\leq n\leq 10^{18}, 1\leq Query\leq 5\times10^5, 1\leq k\leq 6$.)
 
 2. [Rik, the Space Traveler](https://toph.co/p/rik-the-space-traveller)
 

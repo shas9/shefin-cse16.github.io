@@ -176,7 +176,7 @@ f[w][x]
 <p>অর্থাৎ, এই ইকুয়েশনের প্রথম, দ্বিতীয় এবং তৃতীয় ম্যাট্রিক্সকে যথাক্রমে $F$, $M$ এবং $B$ দিয়ে রিপ্রেজেন্ট করলে আমরা লিখতে পারিঃ</p>
 <p>\begin{align}F = M^x \times B \end{align}</p>
 <p>$M^x$ সরাসরি লুপ চালিয়ে গুণ করে বের করলে অবশ্যই টাইম কমপ্লেক্সিটিতে হবে না । আমাদের আরো ভালো উপায় বের করতে হবে ।  লক্ষ্য করি, আমরা $a^p$ ($a, p$ পূর্ণসংখ্যা) কে চাইলে এভাবে লিখতে পারিঃ<br>
-$$ a^p = a^{p_1} \times a^{p_2} \times &hellip;&hellip; \times a^{p_n} $$, যেখানে $p_1, p_2, &hellip;, p_n$, এরা 2 এর কোনো পাওয়ার ।</p>
+$$ a^p = a^{p_1} \times a^{p_2} \times &hellip;&hellip; \times a^{p_n} $$, যেখানে $p_1, p_2, &hellip;, p_n$, এরা $2$ এর কোনো পাওয়ার ।</p>
 <p>যেমনঃ $a^{11} = a^8\times a^2\times a^1$ ।</p>
 <p>সুতরাং, $M$ এর $2$ এর পাওয়ারযুক্ত ম্যাট্রিক্সগুলো প্রিক্যালকুলেট করে রেখে দিলে প্রত্যেক কুয়েরীতে $logx$ টা মাল্টিপ্লিকেশন করেই $M^x$ বের করে ফেলা সম্ভব । যেহেতু, $n\times n$ম্যাট্রিক্স মাল্টিপ্লিকেশনের কমপ্লেক্সিটি $O(n^3)$, তাই টোটাল কমপ্লেক্সিটি হবেঃ $O(Q\times n^3logx)$, যেখানে $Q$ হচ্ছে কুয়েরীর সংখ্যা এবং $n$ হচ্ছে নোড নাম্বার বা ম্যাট্রিক্সের ডাইমেনশন। কিন্তু এটা যথেষ্ট ফাস্ট না । $100$টা নোড, $1000$টা কুয়েরীর জন্যঃ $O(Q \times n^3 logx) &gt; 10^{10}$ ।</p>
 <p>আমাদের আরো অপটিমাইজড এপ্রোচ বের করতে হবে । ধরা যাক, $M^x = M^{x_1}\times M^{x_2} \times&hellip;\times  M^{x_n}$, যেখানে ${x_1}, {x_2},&hellip;,{x_n}$ এরা $2$ এর কোনো পাওয়ার ।</p>
@@ -208,7 +208,7 @@ c
 <p>Some practice problems:</p>
 <ol>
 <li>
-<p><a href="https://algo.codemarshal.org/contests/gub-iupc-18/problems/E">Tribonacci</a> , (Problem in short: Given Tribonacci relation: $f(n) = f(n-1)+f(n-2)+f(n-3)$. Base cases: $f(0)=1, f(1)=1, f(2)=2$. In each query, you&rsquo;ll be given two integers $n, k$. Print the last $k$ digits of $n^{th}$ Tribonacci number. $0\leq n\leq 10^{18}, 1\leq Query\leq 5\times10^5, 1\leq k\leq 6$.)</p>
+<p><a href="https://algo.codemarshal.org/contests/gub-iupc-18/problems/E">Tribonacci</a> , (Problem in short: Given Tribonacci relation: $f(n) = f(n-1)+f(n-2)+f(n-3)$. Base cases: $f(0)=0, f(1)=1, f(2)=2$. In each query, you&rsquo;ll be given two integers $n, k$. Print the last $k$ digits of $n^{th}$ Tribonacci number. $0\leq n\leq 10^{18}, 1\leq Query\leq 5\times10^5, 1\leq k\leq 6$.)</p>
 </li>
 <li>
 <p><a href="https://toph.co/p/rik-the-space-traveller">Rik, the Space Traveler</a></p>
