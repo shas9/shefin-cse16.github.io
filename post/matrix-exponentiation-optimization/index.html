@@ -141,7 +141,7 @@
 	<article>
 		<h2 id="heading"></h2>
 <p>[এই আর্টিকেল পড়তে অবশ্যই ম্যাট্রিক্স এক্সপোনেনশিয়েশন সম্পর্কে ভালো আইডিয়া থাকতে হবে । ]</p>
-<p>একটা প্রবলেম চিন্তা করা যাক। $100$টি নোডের একটি গ্রাফ দেওয়া আছে । গ্রাফের নোডগুলো বাই-ডিরেকশনাল এজ দিয়ে কানেক্টেড এবং যেকোনো $2$টি এজের মাঝে একাধিক এজ নেই । $1000$টি কুয়েরী থাকবে । প্রত্যেক কুয়েরীতে দুইটি পূর্ণসংখ্যা $u$ এবং $x$ ($x &lt;= 10^7$) দেওয়া থাকবে। বলতে হবে, গ্রাফে নোড $u$ থেকে শুরু হয়ে কতগুলো $x$ লেংথের পথ আছে ।</p>
+<p>একটা প্রবলেম চিন্তা করা যাক। $100$টি নোডের একটি গ্রাফ দেওয়া আছে । গ্রাফের নোডগুলো বাই-ডিরেকশনাল এজ দিয়ে কানেক্টেড এবং যেকোনো $2$টি এজের মাঝে একাধিক এজ নেই । $1000$টি কুয়েরী থাকবে । প্রত্যেক কুয়েরীতে দুইটি পূর্ণসংখ্যা $u$ এবং $x$ ($x \leq 10^7$) দেওয়া থাকবে। বলতে হবে, গ্রাফে নোড $u$ থেকে শুরু হয়ে কতগুলো $x$ লেংথের পথ আছে ।</p>
 <p>এখন আমরা এই প্রবলেমের সলিউশন নিয়ে চিন্তা করব । প্রথমে আমরা এমন একটা গ্রাফের কথা চিন্তা করি, যে গ্রাফে নোডসংখ্যা মাত্র $3$ এবং নোডগুলো হচ্ছে $u, v$  এবং $w$ ।  ধরা যাক, নোড $u$ এর নোড $v$ এবং নোড $w$ এর সাথে এজ আছে । এখান থেকে একটু চিন্তা করলেই দেখা যায়, নোড $u$ থেকে $x$ লেংথের পথ = (নোড $v$ থেকে $x-1$ লেংথের পথ + নোড $w$ থেকে $x-1$ লেংথের পথ) । তাহলে নোড $u$ থেকে $k$ লেংথের পথ $f[u][x]$ হলে আমরা লিখতে পারি,</p>
 <p>$$f[u][x] = f[v][x-1] + f[w][x-1]$$</p>
 <p>এই রিকারেন্স রিলেশনের বেইস কেস হচ্ছে $f[u][0]$ । যেহেতু, $u$ থেকে শুরু হয়ে $0$ লেংথের পথ মানে হচ্ছে $u$ থেকে কোথাও না যাওয়া এবং এমন ঘটনা শুধু একভাবেই সম্ভব, সেহেতু $f[u][0] = 1$ ।</p>
@@ -208,7 +208,7 @@ c
 <p>Some practice problems:</p>
 <ol>
 <li>
-<p><a href="https://algo.codemarshal.org/contests/gub-iupc-18/problems/E">Tribonacci</a> , (Problem in short: Given Tribonacci relation: $f(n) = f(n-1)+f(n-2)+f(n-3)$. Base cases: $f(0)=1, f(1)=1, f(2)=2$. In each query, you&rsquo;ll be given two integers $n, k$. Print the last $k$ digits of $n^{th}$ Tribonacci number. $0&lt;=n&lt;=10^{18}, 1&lt;=Query&lt;=5\times10^5, 1&lt;=k&lt;=6$.)</p>
+<p><a href="https://algo.codemarshal.org/contests/gub-iupc-18/problems/E">Tribonacci</a> , (Problem in short: Given Tribonacci relation: $f(n) = f(n-1)+f(n-2)+f(n-3)$. Base cases: $f(0)=1, f(1)=1, f(2)=2$. In each query, you&rsquo;ll be given two integers $n, k$. Print the last $k$ digits of $n^{th}$ Tribonacci number. $0\leq n\leq 10^{18}, 1\leq Query\leq 5\times10^5, 1\leq k\leq 6$.)</p>
 </li>
 <li>
 <p><a href="https://toph.co/p/rik-the-space-traveller">Rik, the Space Traveler</a></p>
