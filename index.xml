@@ -6,10 +6,20 @@
     <description>Recent content on Shefin&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 18 Feb 2020 03:18:41 +0600</lastBuildDate>
+    <lastBuildDate>Wed, 19 Feb 2020 21:44:41 +0600</lastBuildDate>
     
 	<atom:link href="https://shefin-cse16.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Matrix Exponentiation: O(n²logx) per Query</title>
+      <link>https://shefin-cse16.github.io/post/matrix-exponentiation-optimization/</link>
+      <pubDate>Wed, 19 Feb 2020 21:44:41 +0600</pubDate>
+      
+      <guid>https://shefin-cse16.github.io/post/matrix-exponentiation-optimization/</guid>
+      <description>[এই আর্টিকেল পড়তে অবশ্যই ম্যাট্রিক্স এক্সপোনেনশিয়েশনসম্পর্কে ভালো আইডিয়া থাকতে হবে । ]
+একটা প্রবলেম চিন্তা করা যাক। $100$টি নোডের একটি গ্রাফ দেওয়া আছে । গ্রাফের নোডগুলো বাই-ডিরেকশনাল এজ দিয়ে কানেক্টেড এবং যেকোনো $2$টি এজের মাঝে একাধিক এজ নেই । $1000$টি কুয়েরী থাকবে । প্রত্যেক কুয়েরীতে দুইটি পূর্ণসংখ্যা $u$ এবং $x$ ($x &amp;lt;= 10^7$) দেওয়া থাকবে। বলতে হবে, গ্রাফে নোড $u$ থেকে শুরু হয়ে কতগুলো $x$ লেংথের পথ আছে ।</description>
+    </item>
     
     <item>
       <title>Repeating Units</title>

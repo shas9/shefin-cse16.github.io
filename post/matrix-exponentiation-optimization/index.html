@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# website: http://ogp.me/ns/website#">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="description" content="Matrix Exponentiation Optimization">
+    <meta property="og:title" content="Matrix Exponentiation: O(n²logx) per Query">
+    
+    <meta property="og:type" content="article">
+    <meta property="article:published_time" content="2020-02-19">
+    
+    <meta property="og:description" content="Matrix Exponentiation Optimization">
+    <meta property="og:url" content="https://shefin-cse16.github.io/post/matrix-exponentiation-optimization/">
+    <meta property="og:site_name" content="Shefin&#39;s Blog">
+    
+    <meta property="og:tags" content="Matrix Exponentiation">
+    
+    <meta name="generator" content="Hugo 0.64.1" />
+    <title>Matrix Exponentiation: O(n²logx) per Query &middot; Shefin&#39;s Blog</title>
+    
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.7/styles/default.min.css">
+    
+    <link rel="stylesheet" href="https://shefin-cse16.github.io/css/style.css">
+    
+    <link href="https://shefin-cse16.github.io/index.xml" rel="alternate" type="application/rss+xml" title="Shefin&#39;s Blog" />
+    
+    
+    <link rel="icon" href="https://shefin-cse16.github.io/img/icon.jpg" />
+    
+
+    
+    
+    <script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+  });
+  MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+
+  MathJax.Hub.Config({
+  
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+  });
+</script>
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top visible-xs">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			
+				<a class="navbar-brand" href="https://shefin-cse16.github.io/">RISAL SHAHRIAR SHEFIN</a>
+			
+		</div>
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav">
+				
+				
+					<li><a href="https://shefin-cse16.github.io/about/">About</a></li>
+				
+					<li><a href="https://shefin-cse16.github.io/post/">Blog</a></li>
+				
+					<li><a href="https://shefin-cse16.github.io/tags/">Category</a></li>
+				
+			</ul>
+		</div>
+	</div>
+</nav>
+<div class="container-fluid">
+	<div class="row">
+		<div id="menu" class="hidden-xs col-sm-4 col-md-3">
+	<div id="menu-content" class="vertical-align">
+		
+			<h1 class="text-center"><a href="https://shefin-cse16.github.io/">RISAL SHAHRIAR SHEFIN</a></h1>
+		
+		
+		
+			<small class="text-center center-block">PROGRAMMING BLOG</small>
+		
+		
+		
+			<img id="profile-pic" src="https://shefin-cse16.github.io//img/profile.png" alt="My Picture" class="img-circle center-block">
+		
+		<div id="social" class="text-center">
+			
+				<a href="https://www.facebook.com/shahriar.shefin"><i class="fa fa-facebook fa-2x"></i></a>
+			
+				<a href="https://github.com/shefin-cse16"><i class="fa fa-github fa-2x"></i></a>
+			
+				<a href="https://www.linkedin.com/in/risal-shahriar-shefin/"><i class="fa fa-linkedin fa-2x"></i></a>
+			
+
+			<a href="mailto:shefin.cse16@gmail.com"><i class="fa fa-envelope-o fa-2x"></i></a>
+		</div>
+		<div id="links" class="text-center">
+			
+			
+				<a href="https://shefin-cse16.github.io/about/">About</a>
+			
+				<a href="https://shefin-cse16.github.io/post/">Blog</a>
+			
+				<a href="https://shefin-cse16.github.io/tags/">Category</a>
+			
+		</div>
+	</div>
+</div>
+
+		<div id="content" class="col-xs-12 col-sm-8 col-md-9">
+			<div class="row">
+				<div id="post" class="col-sm-offset-1 col-sm-10 col-md-10 col-lg-8">
+
+<main>
+	<header>
+		<h1>Matrix Exponentiation: O(n²logx) per Query</h1>
+	</header>
+
+	<article>
+		<h2 id="heading"></h2>
+<p>[এই আর্টিকেল পড়তে অবশ্যই ম্যাট্রিক্স এক্সপোনেনশিয়েশনসম্পর্কে ভালো আইডিয়া থাকতে হবে । ]</p>
+<p>একটা প্রবলেম চিন্তা করা যাক। $100$টি নোডের একটি গ্রাফ দেওয়া আছে । গ্রাফের নোডগুলো বাই-ডিরেকশনাল এজ দিয়ে কানেক্টেড এবং যেকোনো $2$টি এজের মাঝে একাধিক এজ নেই । $1000$টি কুয়েরী থাকবে । প্রত্যেক কুয়েরীতে দুইটি পূর্ণসংখ্যা $u$ এবং $x$ ($x &lt;= 10^7$) দেওয়া থাকবে। বলতে হবে, গ্রাফে নোড $u$ থেকে শুরু হয়ে কতগুলো $x$ লেংথের পথ আছে ।</p>
+<p>এখন আমরা এই প্রবলেমের সলিউশন নিয়ে চিন্তা করব । প্রথমে আমরা এমন একটা গ্রাফের কথা চিন্তা করি, যে গ্রাফে নোডসংখ্যা মাত্র $3$ এবং নোডগুলো হচ্ছে $u, v$  এবং $w$ ।  ধরা যাক, নোড $u$ এর নোড $v$ এবং নোড $w$ এর সাথে এজ আছে । এখান থেকে একটু চিন্তা করলেই দেখা যায়, নোড $u$ থেকে $x$ লেংথের পথ = (নোড $v$ থেকে $x-1$ লেংথের পথ + নোড $w$ থেকে $x-1$ লেংথের পথ) । তাহলে নোড $u$ থেকে $k$ লেংথের পথ $f[u][x]$ হলে আমরা লিখতে পারি,</p>
+<p>$$f[u][x] = f[v][x-1] + f[w][x-1]$$</p>
+<p>এই রিকারেন্স রিলেশনের বেইস কেস হচ্ছে $f[u][0]$ । যেহেতু, $u$ থেকে শুরু হয়ে $0$ লেংথের পথ মানে হচ্ছে $u$ থেকে কোথাও না যাওয়া এবং এমন ঘটনা শুধু একভাবেই সম্ভব, সেহেতু $f[u][0] = 1$ ।</p>
+<p>গ্রাফ যদি $(w\leftrightarrow u\leftrightarrow v)$ এমন হয়, তাহলে $1$ লেংথের পথের জন্য আমরা লিখতে পারি,</p>
+<p>$$\left[\begin{matrix}
+f[u][1] \newline
+f[v][1] \newline
+f[w][1]
+\end{matrix}\right] = \left[\begin{matrix}
+1 &amp; 1 &amp; 0 \newline
+0 &amp; 0 &amp; 1 \newline
+0 &amp; 0 &amp; 1
+\end{matrix}\right] \times \left[\begin{matrix}
+f[w][0] \newline
+f[v][0] \newline
+f[u][0]
+\end{matrix}\right]$$</p>
+<p>সুতরাং, $x$ লেংথের পথের জন্যঃ</p>
+<p>$$\left[\begin{matrix}
+f[u][x] \newline
+f[v][x] \newline
+f[w][x]
+\end{matrix}\right] = \left[\begin{matrix}
+1 &amp; 1 &amp; 0 \newline
+0 &amp; 0 &amp; 1 \newline
+0 &amp; 0 &amp; 1
+\end{matrix}\right]^x \times \left[\begin{matrix}
+1 \newline
+1 \newline
+1
+\end{matrix}\right]$$</p>
+<p>অর্থাৎ, এই ইকুয়েশনের প্রথম, দ্বিতীয় এবং তৃতীয় ম্যাট্রিক্সকে যথাক্রমে $F$, $M$ এবং $B$ দিয়ে রিপ্রেজেন্ট করলে আমরা লিখতে পারিঃ</p>
+<p>\begin{align}F = M^x \times B \end{align}</p>
+<p>$M^x$ সরাসরি লুপ চালিয়ে গুণ করে বের করলে অবশ্যই টাইম কমপ্লেক্সিটিতে হবে না । আমাদের আরো ভালো উপায় বের করতে হবে ।  লক্ষ্য করি, আমরা $a^p$ ($a, p$ পূর্ণসংখ্যা) কে চাইলে এভাবে লিখতে পারিঃ<br>
+$$ a^p = a^{p_1} \times a^{p_2} \times &hellip;&hellip; \times a^{p_n} $$, যেখানে $p_1, p_2, &hellip;, p_n$, এরা 2 এর কোনো পাওয়ার ।</p>
+<p>যেমনঃ $a^{11} = a^8\times a^2\times a^1$ ।</p>
+<p>সুতরাং, $M$ এর $2$ এর পাওয়ারযুক্ত ম্যাট্রিক্সগুলো প্রিক্যালকুলেট করে রেখে দিলে  প্রত্যেক কুয়েরীতে $logx$ টা মাল্টিপ্লিকেশন করেই $M^x$ বের করে ফেলা সম্ভব । যেহেতু, $n\times n$ম্যাট্রিক্স মাল্টিপ্লিকেশনের কমপ্লেক্সিটি $O(n^3)$, তাই টোটাল কমপ্লেক্সিটি হবেঃ $O(Q\times n^3logx)$, যেখানে $Q$ হচ্ছে কুয়েরীর সংখ্যা এবং $n$ হচ্ছে নোড নাম্বার বা ম্যাট্রিক্সের ডাইমেনশন। কিন্তু এটা যথেষ্ট ফাস্ট না । $100$টা নোড, $1000$টা কুয়েরীর জন্যঃ $O(Q \times n^3 logx) &gt; 10^{10}$ ।</p>
+<p>আমাদের আরো অপটিমাইজড এপ্রোচ বের করতে হবে । ধরা যাক, $M^x = M^{x_1}\times M^{x_2} \times&hellip;\times  M^{x_n}$, যেখানে ${x_1}, {x_2},&hellip;,{x_n}$ এরা $2$ এর কোনো পাওয়ার ।</p>
+<p>তাহলে $(1)$ নং ইকুয়েশন থেকে,</p>
+<p>$F = M^x \times B$</p>
+<p>$\Rightarrow F = (M^{x_1}\times M^{x_2}\times&hellip;\times M^{x_n}\times B)$</p>
+<p>$\Rightarrow F = (M^{x_1}\times M^{x_2}\times&hellip;\times (M^{x_n}\times B))$</p>
+<p>$\Rightarrow F = (M^{x_1}\times M^{x_2}\times&hellip;\times B_1)$</p>
+<p>$&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.$</p>
+<p>$&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.$</p>
+<p>$\Rightarrow F = (M^{x_1}\times B_{n-1})$</p>
+<p>$\Rightarrow F = B_{n} $</p>
+<p>যেহেতু, প্রতিবার গুণ হচ্ছে লিনিয়ার ম্যাট্রিক্সের সাথে, সেহেতু গুণফলও হবে আরেকটি লিনিয়ার ম্যাট্রিক্স। বর্গ ম্যাট্রিক্সের সাথে লিনিয়ার ম্যাট্রিক্সের গুণ যেহেতু $O(n^2)$ এ করা যায়, সেহেতু টোটাল কমপ্লেক্সিটি হবেঃ
+$$O(Q\times n^2logx)$$ , এটা যথেষ্ট ফাস্ট ।</p>
+<p>ফাইনালি আমাদের সেই $3$টা নোডের গ্রাফের জন্য,
+$$F = B_{n}$$
+$$\Rightarrow \left[\begin{matrix}
+f[u][x] \newline
+f[v][x] \newline
+f[w][x] 
+\end{matrix}\right] = \left[\begin{matrix}
+a \newline
+b \newline
+c
+\end{matrix}\right]$$</p>
+<p>, যেখানে $a,b,c$ পূর্ণসংখ্যা এবং $f[u][x] = a, f[v][x] = b, f[w][x] = c$ । নোডের সংখ্যা আরো বাড়ালেও একই প্রসেস অনুসরণ করে ফলাফল বের করা যাবে।</p>
+<p>ম্যাট্রিক্স এক্সপোনেনশিয়েশনের অনেক প্রবলেমেই সব কুয়েরীর জন্য ম্যাট্রিক্স ফিক্সড থাকলে, এভাবে প্রত্যেক কুয়েরীতে $O(n^2logx)$ কমপ্লেক্সিটিতে ফলাফল বের করা সম্ভব ।</p>
+<h3 id="heading-1"></h3>
+<p>Some practice problems:</p>
+<ol>
+<li>
+<p><a href="https://algo.codemarshal.org/contests/gub-iupc-18/problems/E">Tribonacci</a> , (Problem in short: Given Tribonacci relation: $f(n) = f(n-1)+f(n-2)+f(n-3)$. Base cases: $f(0)=1, f(1)=1, f(2)=2$. In each query, you&rsquo;ll be given two integers $n, k$. Print the last $k$ digits of $n^{th}$ Tribonacci number. $0&lt;=n&lt;=10^{18}, 1&lt;=Query&lt;=5\times10^5, 1&lt;=k&lt;=6$.)</p>
+</li>
+<li>
+<p><a href="https://toph.co/p/rik-the-space-traveller">Rik, the Space Traveler</a></p>
+</li>
+</ol>
+<p>My template: <a href="https://github.com/Shefin-CSE16/Competitive-Programming/blob/master/Templates/Matrix%20Expo%20Optimized">Matrix Exponentiation Optimized</a></p>
+
+	</article>
+</main>
+
+<div id="bottom-nav" class="text-center center-block">
+	<a href=" https://shefin-cse16.github.io/" class="btn btn-default"><i class="fa fa-home"></i> Home</a>
+</div>
+
+
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+  </div>
+  
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'Code-here', 'auto');
+    ga('send', 'pageview');
+    window.baseURL = "https:\/\/shefin-cse16.github.io\/";
+  </script>
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script>
+  
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.7/highlight.min.js"></script>
+  
+  <script src="https://shefin-cse16.github.io//js/App.js"></script>
+  
+</body>
+</html>

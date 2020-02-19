@@ -13,9 +13,9 @@ paginate = 5
 [params]
 	showglobe = true
 
-	favicon = "favicon.ico"
+	favicon = "img/icon.jpg"
 	
-	analytics = "code-here"
+	analytics = "Code-here"
 
 	email = "shefin.cse16@gmail.com"
 
@@ -46,3 +46,7 @@ paginate = 5
 	[[params.navlinks]]
 	name = "Blog"
 	url = "post/"
+
+	[[params.navlinks]]
+	name = "Category"
+	url = "tags/"

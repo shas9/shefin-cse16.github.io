@@ -6,26 +6,17 @@
     <description>Recent content in Tags on Shefin&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 18 Feb 2020 03:18:41 +0600</lastBuildDate>
+    <lastBuildDate>Wed, 19 Feb 2020 21:44:41 +0600</lastBuildDate>
     
 	<atom:link href="https://shefin-cse16.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>blog</title>
-      <link>https://shefin-cse16.github.io/tags/blog/</link>
-      <pubDate>Tue, 18 Feb 2020 03:18:41 +0600</pubDate>
+      <title>Matrix Exponentiation</title>
+      <link>https://shefin-cse16.github.io/tags/matrix-exponentiation/</link>
+      <pubDate>Wed, 19 Feb 2020 21:44:41 +0600</pubDate>
       
-      <guid>https://shefin-cse16.github.io/tags/blog/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Competitive Programming</title>
-      <link>https://shefin-cse16.github.io/tags/competitive-programming/</link>
-      <pubDate>Tue, 18 Feb 2020 03:18:41 +0600</pubDate>
-      
-      <guid>https://shefin-cse16.github.io/tags/competitive-programming/</guid>
+      <guid>https://shefin-cse16.github.io/tags/matrix-exponentiation/</guid>
       <description></description>
     </item>
     
@@ -44,15 +35,6 @@
       <pubDate>Tue, 18 Feb 2020 03:18:41 +0600</pubDate>
       
       <guid>https://shefin-cse16.github.io/tags/repeating-units/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Repunit</title>
-      <link>https://shefin-cse16.github.io/tags/repunit/</link>
-      <pubDate>Tue, 18 Feb 2020 03:18:41 +0600</pubDate>
-      
-      <guid>https://shefin-cse16.github.io/tags/repunit/</guid>
       <description></description>
     </item>
     
