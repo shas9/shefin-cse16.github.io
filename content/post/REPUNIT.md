@@ -2,7 +2,7 @@
 date = "2020-02-18T03:18:41+06:00"
 draft = false
 title = "Repeating Units"
-tags = ["Repeating Units", "Number Theory"]
+tags = ["Number Theory"]
 index = true
 description = "Repeating Units"
 highlight = true
