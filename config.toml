@@ -15,8 +15,7 @@ paginate = 5
 
 	favicon = "img/icon.jpg"
 	
-	analytics = "Code-here"
-	googleAnalytics = "UA-158787337-1"
+	analytics = "UA-158787337-1"
 
 	email = "shefin.cse16@gmail.com"
 
