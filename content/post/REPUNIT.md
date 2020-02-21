@@ -70,13 +70,13 @@ $\Rightarrow d = \frac{b^k - 1}{n\times{(b - 1)}}$
 
 আমরা তাহলে লিখতে পারি,
 
-$(b^k - 1) = 0 (mod (n\times{(b - 1)}) )$
+$(b^k - 1) \equiv 0 (mod (n\times{(b - 1)}) )$
 
-$\Rightarrow b^k = 1 (mod (n\times{(b - 1)}) ) .........(1)$
+$\Rightarrow b^k \equiv 1 (mod (n\times{(b - 1)}) ) .........(1)$
 
 আবার Euler's Theorem থেকে আমরা পাই,
 
-$A^{phi(i)} = 1$ ($mod$ $i$) $........(2)$ [যেখানে $A$ এবং $i$ সহমৌলিক]
+$A^{phi(i)} \equiv 1$ ($mod$ $i$) $........(2)$ [যেখানে $A$ এবং $i$ সহমৌলিক]
 
 সমীকরণ $(1)$ কে $(2)$ এর সাথে তুলনা করে পাই,
 
