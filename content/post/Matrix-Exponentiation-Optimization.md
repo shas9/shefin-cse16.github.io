@@ -109,5 +109,7 @@ Some practice problems:
 
 2. [Rik, the Space Traveler](https://toph.co/p/rik-the-space-traveller)
 
+3. [Count Paths Queries](https://codeforces.com/gym/102644/problem/I)
+
 My template: [Matrix Exponentiation Optimized](https://github.com/Shefin-CSE16/Competitive-Programming/blob/master/Templates/Matrix%20Expo%20Optimized)
 
